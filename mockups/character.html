@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b10">
+  <title>Peritia — Character Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="mockup-meta">
+    <strong>Peritia</strong>
+    <span>Mockup 01 — Character Dashboard</span>
+  </div>
+
+  <div class="phone">
+    <div class="phone-scroll">
+      <div class="status-bar" aria-hidden="true">
+        <span>9:41</span>
+        <div class="status-icons">
+          <span class="signal"><i></i><i></i><i></i><i></i></span>
+          <svg class="icon icon-xs"><use href="#i-wifi"></use></svg>
+          <span class="battery"></span>
+        </div>
+      </div>
+
+      <header class="app-header">
+        <div class="brand">
+          <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2l2.6 7.4L22 12l-7.4 2.6L12 22l-2.6-7.4L2 12l7.4-2.6L12 2Z"></path>
+          </svg>
+          <span class="brand-name">PERITIA</span>
+        </div>
+        <div class="streak-pill">
+          <svg class="icon"><use href="#i-flame"></use></svg>
+          <span><strong>12</strong> day streak</span>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero-card" aria-label="Character summary">
+          <div class="hero-top">
+            <div class="emblem" aria-hidden="true">
+              <svg viewBox="0 0 64 64">
+                <path d="M32 4 60 32 32 60 4 32Z" fill="rgba(233,184,114,.05)" stroke="rgba(233,184,114,.38)" stroke-width="1"></path>
+                <path d="M32 12 52 32 32 52 12 32Z" fill="none" stroke="rgba(233,184,114,.22)" stroke-width="1"></path>
+                <path d="M32 17 39 25 47 32 39 39 32 47 25 39 17 32 25 25Z" fill="rgba(233,184,114,.12)" stroke="#e9b872" stroke-width="1.2"></path>
+                <circle cx="32" cy="32" r="3" fill="#e9b872"></circle>
+              </svg>
+            </div>
+            <div class="hero-identity">
+              <h1 class="hero-name">Pranav</h1>
+              <div class="hero-title">The Polymath</div>
+            </div>
+            <div class="hero-level">
+              <div class="level-number">34</div>
+              <div class="level-label">LEVEL</div>
+            </div>
+          </div>
+
+          <div class="rank-row">
+            <span class="rank-chip">Skilled IV</span>
+            <span class="rank-note">Rank 4 of 10</span>
+            <span class="xp-label">340 / 500 XP</span>
+          </div>
+          <div class="xp-bar" aria-label="340 of 500 XP to next level">
+            <div class="xp-fill" style="width: 68%"></div>
+          </div>
+        </section>
+
+        <div class="section-head">
+          <h2 class="section-title">Attributes</h2>
+          <span class="section-note">Derived from skills</span>
+        </div>
+
+        <section class="attributes-card card" aria-label="Attribute radar and scores">
+          <div class="radar-wrap">
+            <svg class="radar" viewBox="0 0 240 240" role="img" aria-label="Radar chart of eight attributes">
+              <defs>
+                <linearGradient id="radarGradient" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#e9b872" stop-opacity=".38"></stop>
+                  <stop offset="100%" stop-color="#5eead4" stop-opacity=".14"></stop>
+                </linearGradient>
+              </defs>
+
+              <polygon class="radar-grid" points="120,98.5 135.2,104.8 141.5,120 135.2,135.2 120,141.5 104.8,135.2 98.5,120 104.8,104.8"></polygon>
+              <polygon class="radar-grid" points="120,77 150.4,89.6 163,120 150.4,150.4 120,163 89.6,150.4 77,120 89.6,89.6"></polygon>
+              <polygon class="radar-grid" points="120,55.5 165.6,74.4 184.5,120 165.6,165.6 120,184.5 74.4,165.6 55.5,120 74.4,74.4"></polygon>
+              <polygon class="radar-grid" points="120,34 180.8,59.2 206,120 180.8,180.8 120,206 59.2,180.8 34,120 59.2,59.2"></polygon>
+
+              <line class="radar-axis" x1="120" y1="120" x2="120" y2="34"></line>
+              <line class="radar-axis" x1="120" y1="120" x2="180.8" y2="59.2"></line>
+              <line class="radar-axis" x1="120" y1="120" x2="206" y2="120"></line>
+              <line class="radar-axis" x1="120" y1="120" x2="180.8" y2="180.8"></line>
+              <line class="radar-axis" x1="120" y1="120" x2="120" y2="206"></line>
+              <line class="radar-axis" x1="120" y1="120" x2="59.2" y2="180.8"></line>
+              <line class="radar-axis" x1="120" y1="120" x2="34" y2="120"></line>
+              <line class="radar-axis" x1="120" y1="120" x2="59.2" y2="59.2"></line>
+
+              <polygon class="radar-data" points="120,83.9 143.1,96.9 150.1,120 154.7,154.7 120,172.5 93.2,146.8 75.3,120 90.2,90.2"></polygon>
+
+              <circle class="radar-dot" cx="120" cy="83.9" r="2.4"></circle>
+              <circle class="radar-dot" cx="143.1" cy="96.9" r="2.4"></circle>
+              <circle class="radar-dot" cx="150.1" cy="120" r="2.4"></circle>
+              <circle class="radar-dot" cx="154.7" cy="154.7" r="2.4"></circle>
+              <circle class="radar-dot" cx="120" cy="172.5" r="2.4"></circle>
+              <circle class="radar-dot" cx="93.2" cy="146.8" r="2.4"></circle>
+              <circle class="radar-dot" cx="75.3" cy="120" r="2.4"></circle>
+              <circle class="radar-dot" cx="90.2" cy="90.2" r="2.4"></circle>
+            </svg>
+          </div>
+
+          <div class="attribute-list">
+            <div class="attribute">
+              <div class="attribute-label">STR</div>
+              <div class="attribute-value">42</div>
+              <div class="attribute-bar"><span style="width: 42%"></span></div>
+            </div>
+            <div class="attribute">
+              <div class="attribute-label">END</div>
+              <div class="attribute-value">38</div>
+              <div class="attribute-bar"><span style="width: 38%"></span></div>
+            </div>
+            <div class="attribute">
+              <div class="attribute-label">AGI</div>
+              <div class="attribute-value">35</div>
+              <div class="attribute-bar"><span style="width: 35%"></span></div>
+            </div>
+            <div class="attribute">
+              <div class="attribute-label">DEX</div>
+              <div class="attribute-value">57</div>
+              <div class="attribute-bar"><span style="width: 57%"></span></div>
+            </div>
+            <div class="attribute">
+              <div class="attribute-label">FOC</div>
+              <div class="attribute-value">61</div>
+              <div class="attribute-bar"><span style="width: 61%"></span></div>
+            </div>
+            <div class="attribute">
+              <div class="attribute-label">DIS</div>
+              <div class="attribute-value">44</div>
+              <div class="attribute-bar"><span style="width: 44%"></span></div>
+            </div>
+            <div class="attribute">
+              <div class="attribute-label">CRE</div>
+              <div class="attribute-value">52</div>
+              <div class="attribute-bar"><span style="width: 52%"></span></div>
+            </div>
+            <div class="attribute">
+              <div class="attribute-label">VIT</div>
+              <div class="attribute-value">49</div>
+              <div class="attribute-bar"><span style="width: 49%"></span></div>
+            </div>
+          </div>
+        </section>
+
+        <div class="section-head">
+          <h2 class="section-title">Focus</h2>
+          <span class="section-note">1 main · 3 side</span>
+        </div>
+
+        <section class="main-quest" aria-label="Main quest">
+          <div class="quest-kicker">
+            <span class="kicker-label">
+              <svg class="icon"><use href="#i-target"></use></svg>
+              Main quest
+            </span>
+            <span class="quest-skill">Guitar · Rank gate</span>
+          </div>
+          <h3 class="quest-title">Record 3 clean takes</h3>
+          <p class="quest-sub">Demonstrate <strong>Performance 70+</strong> for <strong>Skilled V</strong>.</p>
+          <div class="quest-progress-row">
+            <div class="quest-segments" aria-hidden="true">
+              <span class="segment filled"></span>
+              <span class="segment filled"></span>
+              <span class="segment"></span>
+            </div>
+            <span class="quest-count">2 / 3</span>
+          </div>
+          <div class="quest-actions">
+            <span class="xp-chip">+50 XP</span>
+            <button class="btn-primary" type="button">
+              Continue
+              <svg class="icon"><use href="#i-arrow-right"></use></svg>
+            </button>
+          </div>
+        </section>
+
+        <div class="section-head">
+          <h2 class="section-title">Side quests</h2>
+          <a class="section-link" href="#">View all</a>
+        </div>
+
+        <section class="quest-list card" aria-label="Side quests">
+          <div class="side-quest">
+            <button class="check" type="button" aria-label="Complete practice scales quest" aria-pressed="false">
+              <svg class="icon"><use href="#i-check"></use></svg>
+            </button>
+            <div class="quest-icon" style="color: var(--gold)">
+              <svg class="icon"><use href="#i-music"></use></svg>
+            </div>
+            <div class="quest-info">
+              <div class="quest-name">Practice scales for 20 min</div>
+              <div class="quest-meta">Guitar · Technique</div>
+            </div>
+            <div class="quest-xp">+15 XP</div>
+          </div>
+
+          <div class="side-quest">
+            <button class="check" type="button" aria-label="Complete DSA problem quest" aria-pressed="false">
+              <svg class="icon"><use href="#i-check"></use></svg>
+            </button>
+            <div class="quest-icon" style="color: var(--violet)">
+              <svg class="icon"><use href="#i-code"></use></svg>
+            </div>
+            <div class="quest-info">
+              <div class="quest-name">Solve one DSA problem</div>
+              <div class="quest-meta">DSA · Problem Solving</div>
+            </div>
+            <div class="quest-xp">+20 XP</div>
+          </div>
+
+          <div class="side-quest">
+            <button class="check" type="button" aria-label="Complete push session quest" aria-pressed="false">
+              <svg class="icon"><use href="#i-check"></use></svg>
+            </button>
+            <div class="quest-icon" style="color: var(--teal)">
+              <svg class="icon"><use href="#i-dumbbell"></use></svg>
+            </div>
+            <div class="quest-info">
+              <div class="quest-name">45 min push session</div>
+              <div class="quest-meta">Bodybuilding · Strength</div>
+            </div>
+            <div class="quest-xp">+25 XP</div>
+          </div>
+        </section>
+
+        <div class="section-head">
+          <h2 class="section-title">Skills</h2>
+          <a class="section-link" href="#">View all</a>
+        </div>
+
+        <div class="skill-strip" aria-label="Skill summary cards">
+          <article class="skill-card" style="--accent: var(--gold)">
+            <div class="skill-top">
+              <div class="skill-icon">
+                <svg class="icon"><use href="#i-music"></use></svg>
+              </div>
+              <div class="skill-level">34</div>
+            </div>
+            <div class="skill-name">Guitar</div>
+            <div class="skill-rank">Skilled IV</div>
+            <div class="skill-bar"><span style="width: 68%"></span></div>
+          </article>
+
+          <article class="skill-card" style="--accent: var(--teal)">
+            <div class="skill-top">
+              <div class="skill-icon">
+                <svg class="icon"><use href="#i-chart"></use></svg>
+              </div>
+              <div class="skill-level">42</div>
+            </div>
+            <div class="skill-name">Finance</div>
+            <div class="skill-rank">Builder</div>
+            <div class="skill-bar"><span style="width: 42%"></span></div>
+          </article>
+
+          <article class="skill-card" style="--accent: var(--violet)">
+            <div class="skill-top">
+              <div class="skill-icon">
+                <svg class="icon"><use href="#i-code"></use></svg>
+              </div>
+              <div class="skill-level">28</div>
+            </div>
+            <div class="skill-name">DSA</div>
+            <div class="skill-rank">Adept</div>
+            <div class="skill-bar"><span style="width: 28%"></span></div>
+          </article>
+
+          <article class="skill-card" style="--accent: var(--rose)">
+            <div class="skill-top">
+              <div class="skill-icon">
+                <svg class="icon"><use href="#i-pen"></use></svg>
+              </div>
+              <div class="skill-level">31</div>
+            </div>
+            <div class="skill-name">Sketching</div>
+            <div class="skill-rank">Skilled</div>
+            <div class="skill-bar"><span style="width: 31%"></span></div>
+          </article>
+        </div>
+      </main>
+    </div>
+
+    <nav class="bottom-nav" aria-label="Primary navigation">
+      <a class="nav-item active" href="#" aria-current="page">
+        <svg class="icon"><use href="#i-user"></use></svg>
+        <span>Character</span>
+      </a>
+      <a class="nav-item" href="#">
+        <svg class="icon"><use href="#i-sparkles"></use></svg>
+        <span>Skills</span>
+      </a>
+      <a class="nav-item" href="#">
+        <svg class="icon"><use href="#i-map"></use></svg>
+        <span>Quests</span>
+        <span class="nav-badge">3</span>
+      </a>
+      <a class="nav-item" href="#">
+        <svg class="icon"><use href="#i-book"></use></svg>
+        <span>Journal</span>
+      </a>
+      <a class="nav-item" href="#">
+        <svg class="icon"><use href="#i-grid"></use></svg>
+        <span>More</span>
+      </a>
+    </nav>
+  </div>
+
+  <svg class="svg-sprite" aria-hidden="true">
+    <symbol id="i-flame" viewBox="0 0 24 24">
+      <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
+    </symbol>
+    <symbol id="i-wifi" viewBox="0 0 24 24">
+      <path d="M5 12.55a11 11 0 0 1 14 0"></path>
+      <path d="M8.5 16.1a6 6 0 0 1 7 0"></path>
+      <path d="M12 20h.01"></path>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <path d="M20 6 9 17l-5-5"></path>
+    </symbol>
+    <symbol id="i-music" viewBox="0 0 24 24">
+      <path d="M9 18V5l12-2v13"></path>
+      <circle cx="6" cy="18" r="3"></circle>
+      <circle cx="18" cy="16" r="3"></circle>
+    </symbol>
+    <symbol id="i-code" viewBox="0 0 24 24">
+      <path d="m16 18 6-6-6-6"></path>
+      <path d="m8 6-6 6 6 6"></path>
+    </symbol>
+    <symbol id="i-dumbbell" viewBox="0 0 24 24">
+      <path d="M6 9v6"></path>
+      <path d="M18 9v6"></path>
+      <path d="M3 12h18"></path>
+      <path d="M8 7v10"></path>
+      <path d="M16 7v10"></path>
+    </symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24">
+      <path d="M12 20h9"></path>
+      <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"></path>
+    </symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24">
+      <path d="M3 3v18h18"></path>
+      <path d="m7 15 4-4 3 3 5-6"></path>
+    </symbol>
+    <symbol id="i-user" viewBox="0 0 24 24">
+      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+      <circle cx="12" cy="7" r="4"></circle>
+    </symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24">
+      <path d="M12 3l1.9 5.8L20 10l-6.1 1.2L12 17l-1.9-5.8L4 10l6.1-1.2L12 3Z"></path>
+      <path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8L19 16Z"></path>
+    </symbol>
+    <symbol id="i-map" viewBox="0 0 24 24">
+      <path d="M9 18l-6 3V6l6-3 6 3 6-3v15l-6 3-6-3Z"></path>
+      <path d="M9 3v15"></path>
+      <path d="M15 6v15"></path>
+    </symbol>
+    <symbol id="i-book" viewBox="0 0 24 24">
+      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"></path>
+    </symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24">
+      <path d="M3 3h7v7H3z"></path>
+      <path d="M14 3h7v7h-7z"></path>
+      <path d="M3 14h7v7H3z"></path>
+      <path d="M14 14h7v7h-7z"></path>
+    </symbol>
+    <symbol id="i-target" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="8"></circle>
+      <circle cx="12" cy="12" r="4"></circle>
+      <circle cx="12" cy="12" r="1"></circle>
+    </symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24">
+      <path d="M5 12h14"></path>
+      <path d="m13 6 6 6-6 6"></path>
+    </symbol>
+  </svg>
+
+  <script>
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+
+    const phoneScroll = document.querySelector(".phone-scroll");
+
+    function resetPhoneScroll() {
+      if (phoneScroll) {
+        phoneScroll.scrollTop = 0;
+      }
+    }
+
+    resetPhoneScroll();
+    window.addEventListener("pageshow", resetPhoneScroll);
+    window.addEventListener("load", () => {
+      resetPhoneScroll();
+      setTimeout(resetPhoneScroll, 100);
+      setTimeout(resetPhoneScroll, 500);
+    });
+
+    document.querySelectorAll(".check").forEach((button) => {
+      button.addEventListener("click", () => {
+        const row = button.closest(".side-quest");
+        const isDone = row.classList.toggle("done");
+        button.setAttribute("aria-pressed", String(isDone));
+      });
+    });
+  </script>
+</body>
+</html>

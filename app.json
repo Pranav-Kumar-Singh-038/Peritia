@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "Peritia",
+    "slug": "peritia",
+    "version": "1.0.0",
+    "description": "A local-first life RPG for real skills. Prove your proficiency.",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#080b10",
+    "icon": "./assets/icon.png",
+    "scheme": "peritia",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.peritia.app"
+    },
+    "android": {
+      "package": "com.peritia.app",
+      "versionCode": 1,
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.VIBRATE"
+      ],
+      "adaptiveIcon": {
+        "backgroundColor": "#080b10",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-sqlite",
+      "expo-sharing",
+      "expo-font",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#080b10",
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 180,
+          "resizeMode": "contain",
+          "dark": {
+            "backgroundColor": "#080b10",
+            "image": "./assets/splash-icon.png"
+          }
+        }
+      ]
+    ]
+  }
+}
